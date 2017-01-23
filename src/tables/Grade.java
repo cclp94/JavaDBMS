@@ -10,6 +10,15 @@ public class Grade {
 	public Grade() {
 	}
 
+	public Grade(int cID, int sID, int year, char semester, String grade) {
+		super();
+		CID = cID;
+		SID = sID;
+		this.year = year;
+		this.semester = semester;
+		this.grade = grade;
+	}
+
 	public int getCID() {
 		return CID;
 	}

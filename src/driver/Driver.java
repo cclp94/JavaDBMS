@@ -1,10 +1,13 @@
 package driver;
 
+import tables.Database;
+
 public class Driver {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
+		Database db = new Database();
+		db.initialize();
+		System.out.println(db.lookupGradesForCourse(353));
 	}
 
 }

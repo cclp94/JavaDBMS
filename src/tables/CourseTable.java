@@ -3,32 +3,26 @@ package tables;
 import java.util.HashMap;
 
 public class CourseTable {
-	HashMap<String, Course> records;
+	HashMap<Integer, Course> records;	
 	
-	private class Course{
-		private int CID;
-		private String CName;
-		private String nCredits;
-		public Course(int cID, String cName, String nCredits) {
-			super();
-			CID = cID;
-			CName = cName;
-			this.nCredits = nCredits;
-		}
-		
-		
+	public CourseTable(){
+		records = new HashMap<Integer, Course>();
 	}
 	
-	
 	public void initialize() {
-		// TODO Auto-generated method stub
-		
+		Course c = new Course(353, "Databases", 4);
+		records.put(c.getCID(), c);
+		c = new Course(346, "OS", 4);
+		records.put(c.getCID(), c);
+		c = new Course(352, "Data Structures", 4);
+		records.put(c.getCID(), c);
+		c = new Course(472, "AI", 4);
+		records.put(c.getCID(), c);
 	}
 
 
 	public boolean hasCourse(int courseNumber) {
-		// TODO Auto-generated method stub
-		return false;
+		return records.containsKey(courseNumber);
 	}
 
 }
